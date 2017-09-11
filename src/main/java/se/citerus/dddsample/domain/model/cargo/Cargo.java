@@ -1,5 +1,6 @@
 package se.citerus.dddsample.domain.model.cargo;
 
+import ch.ifocusit.livingdoc.annotations.RootAggregate;
 import org.apache.commons.lang.Validate;
 import se.citerus.dddsample.domain.model.handling.HandlingEvent;
 import se.citerus.dddsample.domain.model.handling.HandlingHistory;
@@ -43,6 +44,7 @@ import se.citerus.dddsample.domain.shared.Entity;
  * in port etc), are captured in this aggregate.
  *
  */
+@RootAggregate
 public class Cargo implements Entity<Cargo> {
 
   private TrackingId trackingId;

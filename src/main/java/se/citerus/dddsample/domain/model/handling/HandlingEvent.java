@@ -1,5 +1,6 @@
 package se.citerus.dddsample.domain.model.handling;
 
+import ch.ifocusit.livingdoc.annotations.RootAggregate;
 import org.apache.commons.lang.Validate;
 import org.apache.commons.lang.builder.EqualsBuilder;
 import org.apache.commons.lang.builder.HashCodeBuilder;
@@ -28,6 +29,7 @@ import java.util.Date;
  * <p/>
  * All other events must be of {@link Type#RECEIVE}, {@link Type#CLAIM} or {@link Type#CUSTOMS}.
  */
+@RootAggregate
 public final class HandlingEvent implements DomainEvent<HandlingEvent> {
 
   private Type type;

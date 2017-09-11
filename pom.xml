@@ -92,6 +92,94 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+
+            <plugin>
+                <groupId>ch.ifocusit.livingdoc</groupId>
+                <artifactId>livingdoc-maven-plugin</artifactId>
+                <version>1.10-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>cargo</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>diagram</goal>
+                        </goals>
+                        <configuration>
+                            <packageRoot>se.citerus.dddsample.domain.model.cargo</packageRoot>
+                            <diagramOutputFilename>cargo_model_diagram</diagramOutputFilename>
+                            <diagramLinkPage>cargo_model_glossary.html</diagramLinkPage>
+                            <glossaryOutputFilename>cargo_model_glossary</glossaryOutputFilename>
+                            <excludes>
+                                <exclude>.*Repository</exclude>
+                                <exclude>.*sameValueAs.*</exclude>
+                                <exclude>.*sameIdentityAs.*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>handling</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>diagram</goal>
+                        </goals>
+                        <configuration>
+                            <packageRoot>se.citerus.dddsample.domain.model.handling</packageRoot>
+                            <diagramOutputFilename>handling_model_diagram</diagramOutputFilename>
+                            <diagramLinkPage>handling_model_glossary.html</diagramLinkPage>
+                            <glossaryOutputFilename>handling_model_glossary</glossaryOutputFilename>
+                            <excludes>
+                                <exclude>.*Repository</exclude>
+                                <exclude>.*Exception</exclude>
+                                <exclude>.*sameValueAs.*</exclude>
+                                <exclude>.*sameIdentityAs.*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>location</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>diagram</goal>
+                        </goals>
+                        <configuration>
+                            <packageRoot>se.citerus.dddsample.domain.model.location</packageRoot>
+                            <diagramOutputFilename>location_model_diagram</diagramOutputFilename>
+                            <diagramLinkPage>location_model_glossary.html</diagramLinkPage>
+                            <glossaryOutputFilename>location_model_glossary</glossaryOutputFilename>
+                            <excludes>
+                                <exclude>.*\.Sample.*</exclude>
+                                <exclude>.*Repository</exclude>
+                                <exclude>.*sameValueAs.*</exclude>
+                                <exclude>.*sameIdentityAs.*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                    <execution>
+                        <id>voyage</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>diagram</goal>
+                            <goal>glossary</goal>
+                        </goals>
+                        <configuration>
+                            <packageRoot>se.citerus.dddsample.domain.model.voyage</packageRoot>
+                            <diagramOutputFilename>voyage_model_diagram</diagramOutputFilename>
+                            <diagramLinkPage>voyage_model_glossary.html</diagramLinkPage>
+                            <glossaryOutputFilename>voyage_model_glossary</glossaryOutputFilename>
+                            <excludes>
+                                <exclude>.*\.Sample.*</exclude>
+                                <exclude>.*Repository</exclude>
+                                <exclude>.*sameValueAs.*</exclude>
+                                <exclude>.*sameIdentityAs.*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
+                </executions>
+                <configuration>
+                    <interactive>true</interactive>
+                    <format>adoc</format>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
     <dependencies>
@@ -190,6 +278,11 @@
             <artifactId>easymock</artifactId>
             <version>2.3</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>ch.ifocusit.livingdoc</groupId>
+            <artifactId>livingdoc-annotations</artifactId>
+            <version>1.9</version>
         </dependency>
     </dependencies>
 

@@ -1,5 +1,6 @@
 package se.citerus.dddsample.domain.model.location;
 
+import ch.ifocusit.livingdoc.annotations.RootAggregate;
 import org.apache.commons.lang.Validate;
 import se.citerus.dddsample.domain.shared.Entity;
 
@@ -10,6 +11,7 @@ import se.citerus.dddsample.domain.shared.Entity;
  * It is uniquely identified by a UN Locode.
  *
  */
+@RootAggregate
 public final class Location implements Entity<Location> {
 
   private UnLocode unLocode;

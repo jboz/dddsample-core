@@ -1,5 +1,6 @@
 package se.citerus.dddsample.domain.model.voyage;
 
+import ch.ifocusit.livingdoc.annotations.RootAggregate;
 import org.apache.commons.lang.Validate;
 import se.citerus.dddsample.domain.model.location.Location;
 import se.citerus.dddsample.domain.shared.Entity;
@@ -11,6 +12,7 @@ import java.util.List;
 /**
  * A Voyage.
  */
+@RootAggregate
 public class Voyage implements Entity<Voyage> {
 
   private VoyageNumber voyageNumber;
