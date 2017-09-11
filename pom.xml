@@ -177,6 +177,23 @@
                             </excludes>
                         </configuration>
                     </execution>
+                    <execution>
+                        <id>service-booking</id>
+                        <phase>compile</phase>
+                        <goals>
+                            <goal>diagram</goal>
+                        </goals>
+                        <configuration>
+                            <packageRoot>se.citerus.dddsample.interfaces.booking.facade</packageRoot>
+                            <diagramOutputFilename>booking_services_diagram</diagramOutputFilename>
+                            <interactive>false</interactive>
+                            <diagramWithDependencies>true</diagramWithDependencies>
+                            <excludes>
+                                <exclude>.*\.dto\..*</exclude>
+                                <exclude>.*\.internal\..*</exclude>
+                            </excludes>
+                        </configuration>
+                    </execution>
                 </executions>
                 <configuration>
                     <interactive>true</interactive>
