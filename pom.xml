@@ -103,6 +103,7 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>diagram</goal>
+                            <goal>glossary</goal>
                         </goals>
                         <configuration>
                             <packageRoot>se.citerus.dddsample.domain.model.cargo</packageRoot>
@@ -121,6 +122,7 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>diagram</goal>
+                            <goal>glossary</goal>
                         </goals>
                         <configuration>
                             <packageRoot>se.citerus.dddsample.domain.model.handling</packageRoot>
@@ -140,6 +142,7 @@
                         <phase>compile</phase>
                         <goals>
                             <goal>diagram</goal>
+                            <goal>glossary</goal>
                         </goals>
                         <configuration>
                             <packageRoot>se.citerus.dddsample.domain.model.location</packageRoot>
@@ -177,7 +180,7 @@
                 </executions>
                 <configuration>
                     <interactive>true</interactive>
-                    <format>adoc</format>
+                    <format>html</format>
                 </configuration>
             </plugin>
         </plugins>
